@@ -1,53 +1,21 @@
 # Ember-link-to-example
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple app to demo an issue when testing `{{link-to}}` helpers.
 
-## Prerequisites
+This app contains 1 initialiser which re-opens `Ember.LinkComponent` and adds a class name `foo`.
 
-You will need the following things properly installed on your computer.
+For each acceptance test that is run, the Initialisers are run.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+This results in multiple class names being added:
 
-## Installation
+	<a id="ember342" class="ember-view foo foo foo foo foo"></a>
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
 
-## Running / Development
+Relevant files are:
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* [app/initializers/links.js](app/initializers/links.js)
 
-### Code Generators
+* [app/templates/components/x-foo.js](app/templates/components/x-foo.js)
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* [tests/integration/components/x-foo-test.js](tests/integration/components/x-foo-test.js)
 

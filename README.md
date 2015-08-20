@@ -15,7 +15,7 @@ Relevant files are:
 
 * [app/initializers/links.js](app/initializers/links.js)
 
-* [app/templates/components/x-foo.js](app/templates/components/x-foo.js)
+* [app/templates/components/x-foo.hbs](app/templates/components/x-foo.hbs)
 
 * [tests/integration/components/x-foo-test.js](tests/integration/components/x-foo-test.js)
 
